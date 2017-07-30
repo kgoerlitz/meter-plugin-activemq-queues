@@ -1,0 +1,9 @@
+{
+    "host": "kube.panamabmc.com",
+    "port": 8161,
+    "broker_name": "PanamaMQ",
+    "username": "panama",
+    "password": "Panama$0",
+    "sourcePrefix": "dev",
+	"pollInterval": 15000
+}

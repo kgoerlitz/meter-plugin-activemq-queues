@@ -1,0 +1,34 @@
+{
+  "name": "meter-plugin-activemq-queus",
+  "version": "0.0.1",
+  "private": false,
+  "description": "ActiveMQ Queues plugin for TrueSight Pulse",
+  "main": "plugin.js",
+  "devDependencies": {},
+  "dependencies": {
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "kubernetes",
+    "plugin",
+    "truesite"
+  ],
+  "author": {
+    "name": "Kevin Goerlitz",
+    "email": "kevin_goerlitz@bmc.com",
+    "url": "https://github.bmc.com/Panama/meter-plugin-activemq-queues"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": ""
+  },
+  "engine": "node >= 6.10.1"
+}

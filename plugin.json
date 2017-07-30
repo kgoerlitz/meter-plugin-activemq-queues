@@ -1,0 +1,77 @@
+{
+	"name": "Pulse ActiveMQ Queues Plugin",
+	"description": "Plugin for ActiveMQ Queues",
+	"version": "0.0.1",
+	"meterVersionRequired": "4.5.0-778",
+	"unsupportedPlatforms": [],
+	"tags": "activemq",
+	"icon": "icon.png",
+	"command": "node plugin.js",
+	"ignore": "node_modules",
+	"metrics": [
+        "ACTIVEMQ_QUEUE_SIZE",
+        "ACTIVEMQ_QUEUE_CONSUMERS",
+        "ACTIVEMQ_QUEUE_ENQUEUED",
+        "ACTIVEMQ_QUEUE_AVG_ENQUEUE_TIME"
+	],
+	"postExtract": "npm install",
+    "dashboards" : [],
+	"paramSchema": [
+        {
+          "title": "ActiveMQ hostname or address",
+          "name": "host",
+          "description": "Hostname of the ActiveMQ instance",
+          "type": "string",
+          "default": "127.0.0.1",
+          "required": true 
+        },
+        {
+          "title": "ActiveMQ  port",
+          "name": "port",
+          "description": "Port number of the ActiveMQ REST API server",
+          "type": "integer",
+          "default": 8161,
+          "required": false 
+        },
+        {
+          "title": "ActiveMQ broker name",
+          "name": "broker_name",
+          "description": "Name or the ActiveMQ broker to monitor",
+          "type": "string",
+          "default": "localhost",
+          "required": true
+        },
+        {
+          "title": "ActiveMQ user",
+          "name": "username",
+          "description": "User name for ActiveMQ REST API server",
+          "type": "string",
+          "default": "admin",
+          "required": false
+        },
+        {
+          "title": "ActiveMQ password",
+          "name": "password",
+          "description": "Password for ActiveMQ REST API server",
+          "type": "password",
+          "default": "admin",
+          "required": false
+        },
+        {
+            "title": "Source Prefix",
+            "name": "sourcePrefix",
+            "description": "The prefix to use for the metric sources (sources will be <prefix>.queue.<queue-name>).",
+            "type": "string",
+            "default": "",
+            "required": false
+        },
+		{
+			"title": "Poll Interval (ms)",
+			"name": "pollInterval",
+			"description": "The Poll Interval (in milliseconds) to call the command.",
+			"type": "integer",
+			"default": 15000,
+			"required": false
+		}
+	]
+}
