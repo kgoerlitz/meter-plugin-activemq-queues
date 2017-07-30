@@ -30,14 +30,10 @@
     "ACTIVEMQ_QUEUE_AVG_ENQUEUE_TIME": {
       "defaultAggregate":    "AVG",
       "defaultResolutionMS": 1000,
-      "description":         "Averge Number of messages in the queue",
-      "displayName":         "ActiveMQ Queue Size",
-      "displayNameShort":    "activemq-queue-size",
+      "description":         "Averge time messages are in the queue",
+      "displayName":         "ActiveMQ Avarage Enqueue Time",
+      "displayNameShort":    "activemq-enqueue-time",
       "unit":                "duration",
-      "valueFrom":           "AverageEnqueueTime",
-      "compute":             {
-          "method":              "multiply",
-          "value":               100
-      }
+      "valueFrom":           "AverageEnqueueTime"
     }
 }
