@@ -1,6 +1,6 @@
 {
   "name": "meter-plugin-activemq-queus",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "private": false,
   "description": "ActiveMQ Queues plugin for TrueSight Pulse",
   "main": "plugin.js",

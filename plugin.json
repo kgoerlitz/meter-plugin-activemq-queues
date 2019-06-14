@@ -1,7 +1,7 @@
 {
 	"name": "Pulse ActiveMQ Queues Plugin",
 	"description": "Plugin for ActiveMQ Queues",
-	"version": "0.0.1",
+	"version": "0.2.1",
 	"meterVersionRequired": "4.5.0-778",
 	"unsupportedPlatforms": [],
 	"tags": "activemq",
@@ -22,7 +22,7 @@
           "name": "host",
           "description": "Hostname of the ActiveMQ instance",
           "type": "string",
-          "default": "127.0.0.1",
+          "default": "panama-activemq",
           "required": true 
         },
         {
@@ -60,7 +60,7 @@
         {
             "title": "Source Prefix",
             "name": "sourcePrefix",
-            "description": "The prefix to use for the metric sources (sources will be <prefix>.queue.<queue-name>).",
+            "description": "The prefix to use for the metric sources (sources will be <prefix>.activemq-<pod-num>.queue.<queue-name>).",
             "type": "string",
             "default": "",
             "required": false
@@ -71,6 +71,14 @@
 			"description": "The Poll Interval (in milliseconds) to call the command.",
 			"type": "integer",
 			"default": 15000,
+			"required": false
+		},
+		{
+			"title": "Number of broker pod instances",
+			"name": "numOfPods",
+			"description": "Number of broker pod instances in the broker network.",
+			"type": "integer",
+			"default": 2,
 			"required": false
 		}
 	]
