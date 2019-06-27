@@ -33,7 +33,7 @@ let previousValues = {};
 function poll() {
 
     for (let podIndex = 0; podIndex < params.numOfPods; podIndex++) {
-        let baseUrl = `http://${params.host}-${podIndex}.activemq:${params.port || 8161}/api/jolokia/read/`;
+        let baseUrl = `http://${params.host}-${podIndex}.activemq:${params.port || 8161}/api/jolokia/read`;
 
         sendRequest('GET', baseUrl + '/' + brokerPath)
             .then(result => {
